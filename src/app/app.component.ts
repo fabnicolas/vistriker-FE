@@ -1,4 +1,4 @@
-import { ViewChild, ContentChild, Component } from '@angular/core';
+import { ViewChild, Component } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 import { MaterialSidenavComponent } from './material-sidenav/material-sidenav.component';

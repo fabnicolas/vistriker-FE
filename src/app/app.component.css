@@ -1,0 +1,7 @@
+div[sidenav-content]{
+    width: 100%;
+}
+
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
