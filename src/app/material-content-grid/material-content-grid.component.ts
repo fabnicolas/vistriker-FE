@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
+import 'rxjs/Rx';
 
 @Component({
   selector: 'app-material-content-grid',
@@ -6,17 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./material-content-grid.component.css']
 })
 export class MaterialContentGridComponent implements OnInit {
+  arr_videos: Array<any>;
 
-  constructor() { }
+  constructor(private http: Http){
+    this.http.get('http://localhost:8200/get_sample_videos')
+      .map(response => response.json())
+      .subscribe(res => this.arr_videos = res);
+  }
 
   ngOnInit() {
   }
-
-  tiles = [
-    {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-  ];
 
 }

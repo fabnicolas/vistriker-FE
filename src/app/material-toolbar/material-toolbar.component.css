@@ -1,6 +1,8 @@
-
-
 .md-toolbar-top{
   width: 100%;
   min-width: 100%;
+}
+
+.mat-toolbar.mat-primary{
+  background: #000;
 }
