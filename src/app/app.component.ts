@@ -8,6 +8,7 @@ import { MaterialSidenavComponent } from './material-sidenav/material-sidenav.co
 })
 export class AppComponent {
   @ViewChild(MaterialSidenavComponent) mdsidenav : MaterialSidenavComponent;
+  channelName = "NoCopyrightSounds";
 
   openChildSidenav = function(){
     this.mdsidenav.openSideNav();
