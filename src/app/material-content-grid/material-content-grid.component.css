@@ -1,0 +1,13 @@
+.content_thumbnail{
+    margin-top: -50px;
+}
+
+.content_thumbnail img{
+    height: 110px;
+    width: 196px;
+}
+
+.content_title{
+    width: 10em;
+    height: 1.2em;
+}

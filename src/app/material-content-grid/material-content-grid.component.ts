@@ -14,7 +14,7 @@ export class MaterialContentGridComponent implements OnInit {
   numcols: number = 6;
 
   constructor(private http: Http){
-    this.http.get('http://localhost:8200/get_example_videos')
+    this.http.get('http://localhost:8200/get_videos/NoCopyrightSounds')
       .map(response => response.json())
       .subscribe(res => this.arr_videos = res);
     this.handleResponsiveLayout(window.screen.width);
