@@ -4,7 +4,7 @@ import { MaterialContentGridComponent } from './material-content-grid/material-c
 
 const MAINMENU_ROUTES: Routes = [
     { path: '', component: MaterialContentGridComponent, data: {channel: 'NoCopyrightSounds'}},
-    { path: 'video', component: VideoViewComponent }
+    { path: 'v/:id', component: VideoViewComponent }
 ];
 
 export const CONST_ROUTING = RouterModule.forRoot(MAINMENU_ROUTES);

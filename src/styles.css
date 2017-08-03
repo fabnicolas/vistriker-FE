@@ -8,3 +8,12 @@ html, body {
     min-height: 100%;
     background:lightgray;
 }
+
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+div[sidenav-menu] a{
+    color: #000;
+}

@@ -15,6 +15,7 @@ import { MaterialSidenavComponent } from './material-sidenav/material-sidenav.co
 import { MaterialToolbarComponent } from './material-toolbar/material-toolbar.component';
 import { MaterialContentGridComponent } from './material-content-grid/material-content-grid.component';
 import { VideoViewComponent } from './video-view/video-view.component';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { VideoViewComponent } from './video-view/video-view.component';
     MaterialSidenavComponent,
     MaterialToolbarComponent,
     MaterialContentGridComponent,
-    VideoViewComponent
+    VideoViewComponent,
+    SafePipe
   ],
   imports: [
     HttpModule,
