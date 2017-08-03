@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { CONST_ROUTING } from './app.routing';
 
 import { AppComponent } from './app.component';
 
@@ -13,6 +14,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MaterialSidenavComponent } from './material-sidenav/material-sidenav.component';
 import { MaterialToolbarComponent } from './material-toolbar/material-toolbar.component';
 import { MaterialContentGridComponent } from './material-content-grid/material-content-grid.component';
+import { VideoViewComponent } from './video-view/video-view.component';
 
 @NgModule({
   declarations: [
@@ -20,14 +22,16 @@ import { MaterialContentGridComponent } from './material-content-grid/material-c
     ToolbarComponent,
     MaterialSidenavComponent,
     MaterialToolbarComponent,
-    MaterialContentGridComponent
+    MaterialContentGridComponent,
+    VideoViewComponent
   ],
   imports: [
     HttpModule,
     BrowserModule,
     BrowserAnimationsModule,
     MdButtonModule, MdSidenavModule, MdCardModule, MdMenuModule,
-    MdToolbarModule, MdIconModule, MdGridListModule
+    MdToolbarModule, MdIconModule, MdGridListModule,
+    CONST_ROUTING
   ],
   providers: [],
   bootstrap: [AppComponent]

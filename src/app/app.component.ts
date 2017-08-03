@@ -7,6 +7,8 @@ import { MaterialSidenavComponent } from './material-sidenav/material-sidenav.co
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  mode=0;
+
   @ViewChild(MaterialSidenavComponent) mdsidenav : MaterialSidenavComponent;
   channelName = "NoCopyrightSounds";
 

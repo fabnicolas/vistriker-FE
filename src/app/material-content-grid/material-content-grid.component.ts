@@ -1,4 +1,5 @@
 import { Input, Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 
@@ -9,22 +10,28 @@ import 'rxjs/Rx';
   host: {'(window:resize)': 'onResize($event)'}
 })
 export class MaterialContentGridComponent implements OnInit {
-  @Input() channel : string;
-  http: Http;
+  @Input('channel') channel_name : string;
+  private http: Http;
+  private route: ActivatedRoute;
 
   arr_videos: Array<any>;
 
   numcols: number = 6;
 
-  constructor(http: Http){
+  constructor(http: Http, route: ActivatedRoute){
     this.http=http;
+    this.route=route;
     this.handleResponsiveLayout(window.screen.width);
   }
 
   ngOnInit() {
-    this.http.get('http://localhost:8200/get_videos/'+this.channel)
-      .map(response => response.json())
-      .subscribe(res => this.arr_videos = res);
+    this.route.data.subscribe(
+      dataroute => {
+       this.http.get('http://localhost:8200/get_videos/'+dataroute.channel)
+        .map(response => response.json())
+        .subscribe(res => this.arr_videos = res);
+      }
+    );
   }
 
   onResize(event) {
