@@ -1,13 +1,15 @@
-.content_thumbnail{
-    margin-top: -50px;
-}
-
 .content_thumbnail img{
-    height: 110px;
-    width: 196px;
+    width: 100%;
 }
 
 .content_title{
-    width: 10em;
     height: 1.2em;
+}
+
+.box{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }

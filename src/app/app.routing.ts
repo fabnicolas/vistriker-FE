@@ -3,7 +3,7 @@ import { VideoViewComponent } from './video-view/video-view.component';
 import { MaterialContentGridComponent } from './material-content-grid/material-content-grid.component';
 
 const MAINMENU_ROUTES: Routes = [
-    { path: '', component: MaterialContentGridComponent, data: {channel: 'NoCopyrightSounds'}},
+    { path: '', component: MaterialContentGridComponent, data: {channel: 'Zeb89'}},
     { path: 'watch', component: VideoViewComponent }
 ];
 

@@ -39,7 +39,8 @@ export class MaterialContentGridComponent implements OnInit {
   }
 
   handleResponsiveLayout(width){
-    if(width < 750)      this.numcols=2;
+    if(width < 650)      this.numcols=1;
+    else if(width < 750) this.numcols=2;
     else if(width < 950) this.numcols=4;
     else                 this.numcols=6;
   }
