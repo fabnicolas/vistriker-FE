@@ -17,7 +17,7 @@ export class VideoViewComponent implements OnInit {
   constructor(route: ActivatedRoute) {this.route=route;}
 
   ngOnInit() {
-    this.route.params.subscribe(paramsroute => {this.video_id=paramsroute['id'];});
+    this.route.queryParams.subscribe(paramsroute => this.video_id=paramsroute['v']);
   }
 
 }

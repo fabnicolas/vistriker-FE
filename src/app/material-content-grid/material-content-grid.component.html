@@ -4,7 +4,7 @@
       [colspan]="1"
       [rowspan]="1"
       [style.background]="'lightgray'">
-      <div layout="column">
+      <div layout="column" [routerLink]="['/watch']" [queryParams]="{v: video.video_id}">
         <div class="content_thumbnail">
           <img alt="{{video.title}}" src="{{video.thumbnail}}"/>
         </div>
