@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
-import { CONST_ROUTING } from './app.routing';
 
 import { AppComponent } from './app.component';
+
+import { HttpModule } from '@angular/http';
+import { CONST_ROUTING, RouterModule } from './app.routing';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import  {
@@ -25,7 +26,8 @@ import { SafePipe } from './safe.pipe';
     MaterialToolbarComponent,
     MaterialContentGridComponent,
     VideoViewComponent,
-    SafePipe
+    SafePipe,
+    RouterModule
   ],
   imports: [
     HttpModule,
@@ -33,7 +35,8 @@ import { SafePipe } from './safe.pipe';
     BrowserAnimationsModule,
     MdButtonModule, MdSidenavModule, MdCardModule, MdMenuModule,
     MdToolbarModule, MdIconModule, MdGridListModule,
-    CONST_ROUTING
+    CONST_ROUTING,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

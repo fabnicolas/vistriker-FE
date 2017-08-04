@@ -7,4 +7,5 @@ const MAINMENU_ROUTES: Routes = [
     { path: 'watch', component: VideoViewComponent }
 ];
 
-export const CONST_ROUTING = RouterModule.forRoot(MAINMENU_ROUTES);
+export const CONST_ROUTING = RouterModule.forRoot(MAINMENU_ROUTES, {enableTracing: true});
+export { RouterModule };

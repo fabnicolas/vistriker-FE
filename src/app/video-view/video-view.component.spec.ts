@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VideoViewComponent } from './video-view.component';
+import { SafePipe } from '../safe.pipe';
+import { RouterTestingModule } from '@angular/router/testing';
+
 
 describe('VideoViewComponent', () => {
   let component: VideoViewComponent;
@@ -8,7 +11,8 @@ describe('VideoViewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VideoViewComponent ]
+      declarations: [ VideoViewComponent, SafePipe ],
+      imports: [ RouterTestingModule ]
     })
     .compileComponents();
   }));

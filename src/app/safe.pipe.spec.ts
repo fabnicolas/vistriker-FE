@@ -1,8 +1,9 @@
-import { SafePipePipe } from './safe-pipe.pipe';
+import { SafePipe } from './safe.pipe';
+import { DomSanitizer } from '@angular/platform-browser';
 
-describe('SafePipePipe', () => {
+describe('SafePipe', () => {
   it('create an instance', () => {
-    const pipe = new SafePipePipe();
+    const pipe = new SafePipe(null);
     expect(pipe).toBeTruthy();
   });
 });
