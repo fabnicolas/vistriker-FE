@@ -1,9 +1,15 @@
+
 .md-sidenav-wrapper {
-  display: flex;
-  flex-direction: column;
+  height: 100%;
 }
 
 .md-sidenav-wrapper .sidenav-menu {
   min-width: 200px;
   padding: 20px;
+}
+
+.md-sidenav-wrapper .sidenav-content{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }

@@ -2,6 +2,12 @@
   flex: 1 1 auto;
 }
 
-div[sidenav-menu] a{
+div[custom-sidenav-menu] a{
   color: #000;
+}
+
+div[custom-sidenav-content]{
+  display: flex;
+  flex-direction: column;
+	height: 100%;
 }

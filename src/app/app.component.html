@@ -1,15 +1,15 @@
 <app-material-sidenav>
-    <div sidenav-menu>
+    <div custom-sidenav-menu>
         Jolly good!<br/>
         <a [routerLink]="['/watch']" [queryParams]="{v: 'XXX'}" >Video</a>
     </div>
 
-    <div sidenav-content>
+    <div custom-sidenav-content>
         <app-material-toolbar>
             <button md-icon-button (click)="openChildSidenav()">
                 <md-icon>menu</md-icon>
             </button>
-            <a [routerLink]="['/']">Logo</a>
+            <a [routerLink]="['/']"><b>V</b>i<b>S</b>triker</a>
             <span class="example-fill-remaining-space"></span>
             Testo2
         </app-material-toolbar>
