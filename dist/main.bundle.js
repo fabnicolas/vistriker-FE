@@ -662,7 +662,7 @@ var MaterialContentGridComponent = (function () {
         var _this = this;
         this.route.data.subscribe(function (dataroute) {
             _this.channel_name = dataroute.channel;
-            _this.http.get('http://telegrambots-shockgen.rhcloud.com/vistriker-BE/get_videos/' + _this.channel_name)
+            _this.http.get('https://telegrambots-shockgen.rhcloud.com/vistriker-BE/get_videos/' + _this.channel_name)
                 .map(function (response) { return response.json(); })
                 .subscribe(function (res) { return _this.arr_videos = res; });
         });
