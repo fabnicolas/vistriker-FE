@@ -26,8 +26,7 @@ import { SafePipe } from './safe.pipe';
     MaterialToolbarComponent,
     MaterialContentGridComponent,
     VideoViewComponent,
-    SafePipe,
-    RouterModule
+    SafePipe
   ],
   imports: [
     HttpModule,
