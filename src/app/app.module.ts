@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { APP_BASE_HREF } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 
@@ -37,7 +39,12 @@ import { SafePipe } from './safe.pipe';
     CONST_ROUTING,
     RouterModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: APP_BASE_HREF,
+      useValue: environment.frontend_base_url
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

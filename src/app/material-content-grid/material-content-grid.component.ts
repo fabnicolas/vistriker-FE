@@ -1,6 +1,8 @@
 import { Input, Output, EventEmitter, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Http } from '@angular/http';
+import { environment } from '../../environments/environment';
+
 import 'rxjs/add/operator/map'
 
 @Component({
@@ -29,7 +31,7 @@ export class MaterialContentGridComponent implements OnInit {
     this.route.data.subscribe(
       dataroute => {
         this.channel_name=dataroute.channel;
-        this.http.get('http://'+window.location.hostname+':8200/get_videos/'+this.channel_name)
+        this.http.get(environment.backend_url+'/get_videos/'+this.channel_name)
           .map(response => response.json())
           .subscribe(res => this.arr_videos = res);
         }
