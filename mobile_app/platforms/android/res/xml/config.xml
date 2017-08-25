@@ -4,12 +4,21 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="Fullscreen">
+        <param name="android-package" value="com.filfatstudios.fullscreen.Fullscreen" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="BackgroundMode">
+        <param name="android-package" value="de.appplant.cordova.plugin.background.BackgroundMode" />
+    </feature>
     <name>ViStriker</name>
     <description>
-        ViStriker mobile application!
+        ViStriker, signore e signori!
     </description>
-    <author email="finalgalaxy@gmail.com" href="https://finalgalaxy.github.io/vistriker-FE/">
-        Apache Cordova Team
+    <author email="finalgalaxy@gmail.com" href="http://finalgalaxy.github.io/vistriker-FE/">
+        Finalgalaxy
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -21,4 +30,6 @@
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
+    <preference name="KeepRunning" value="true" />
+    <preference name="AndroidLaunchMode" value="singleInstance" />
 </widget>

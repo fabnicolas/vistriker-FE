@@ -6,5 +6,29 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-fs-plugin-fullscreen": {
+        "source": {
+            "type": "registry",
+            "id": "https://github.com/filfat-Studios-AB/cordova-plugin-fullscreen"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-background-mode": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-background-mode"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-device": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-device"
+        },
+        "is_top_level": false,
+        "variables": {}
     }
 }

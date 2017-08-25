@@ -9,7 +9,17 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "cordova-fs-plugin-fullscreen": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        }
+    }
 }

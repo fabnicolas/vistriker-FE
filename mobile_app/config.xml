@@ -2,10 +2,10 @@
 <widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>ViStriker</name>
     <description>
-        ViStriker mobile application!
+        ViStriker, signore e signori!
     </description>
-    <author email="finalgalaxy@gmail.com" href="https://finalgalaxy.github.io/vistriker-FE/">
-        Apache Cordova Team
+    <author email="finalgalaxy@gmail.com" href="http://finalgalaxy.github.io/vistriker-FE/">
+        Finalgalaxy
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -23,6 +23,7 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <engine name="android" spec="^6.2.3" />
-    <engine name="browser" spec="^4.1.0" />
+    <plugin name="cordova-fs-plugin-fullscreen" spec="git+https://github.com/filfat-Studios-AB/cordova-plugin-fullscreen.git" />
+    <plugin name="cordova-plugin-background-mode" spec="^0.7.2" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
 </widget>

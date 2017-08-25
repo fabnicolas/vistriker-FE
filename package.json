@@ -6,7 +6,7 @@
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0 --port 4200",
     "build": "ng build --env=prod -aot --base-href ./vistriker-FE/",
-    "build_mobile": "ng build --env=prod -aot --output-path mobile_app/www --base-href ./",
+    "build_mobile": "ng build --output-path mobile_app/www --base-href ./",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
