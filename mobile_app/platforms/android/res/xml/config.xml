@@ -4,11 +4,11 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <name>HelloCordova</name>
+    <name>ViStriker</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        ViStriker mobile application!
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
+    <author email="finalgalaxy@gmail.com" href="https://finalgalaxy.github.io/vistriker-FE/">
         Apache Cordova Team
     </author>
     <content src="index.html" />
