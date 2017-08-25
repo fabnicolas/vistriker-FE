@@ -4,6 +4,7 @@ import { MaterialContentGridComponent } from './material-content-grid/material-c
 
 const MAINMENU_ROUTES: Routes = [
     { path: '', component: MaterialContentGridComponent, data: {channel: 'Zeb89'}},
+    { path: 'channel', component: MaterialContentGridComponent, data: {channel: 'Zeb89'}},
     { path: 'watch', component: VideoViewComponent }
 ];
 

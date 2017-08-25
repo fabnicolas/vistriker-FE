@@ -44,12 +44,6 @@ import { InputSearchChannelComponent } from './input-search-channel/input-search
     CONST_ROUTING,
     RouterModule
   ],
-  providers: [
-    {
-      provide: APP_BASE_HREF,
-      useValue: environment.frontend_base_url
-    }
-  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
