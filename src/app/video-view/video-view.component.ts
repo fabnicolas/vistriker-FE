@@ -11,7 +11,8 @@ export class VideoViewComponent implements OnInit {
   video_id: string;
 
   getVideoUrl(){
-    return "https://www.youtube.com/embed/"+this.video_id+"?rel=0&autoplay=0";
+    return "https://www.youtube.com/embed/"+this.video_id+"?rel=1&loop=1&autoplay=1"+
+           "&showinfo=0&controls=1&autohide=1&playlist="+this.video_id;
   }
 
   constructor(route: ActivatedRoute) {this.route=route;}
