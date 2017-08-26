@@ -29,13 +29,15 @@ export class MaterialContentGridComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe(
-      dataroute => {
-        this.channel_name=dataroute.channel;
-        this.http.get(environment.backend_url+'/get_videos/'+this.channel_name)
-          .map(response => response.json())
-          .subscribe(res => this.arr_videos = res);
-        }
-    );
+      dataroute => {console.log("ok");this.channel_name=dataroute.channel;}, null, function(){console.log("ok");
+        this.route.queryParams.subscribe(params => {
+          if(params['channel_name']=='') this.channel_name=params['channel_name'];
+        }, null, function(){
+          this.http.get(environment.backend_url+'/get_videos/'+this.channel_name)
+           .map(response => response.json())
+           .subscribe(res => this.arr_videos = res);
+        });
+    });
   }
 
   onResize(event) {

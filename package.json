@@ -6,11 +6,12 @@
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0 --port 4200",
     "build": "ng build --env=prod -aot --base-href ./vistriker-FE/",
-    "build_mobile": "ng build --output-path mobile_app/www --base-href ./",
+    "build_mobile": "ng build --env=prod -aot --delete-output-path=false --output-path mobile_app/www --base-href ./",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "minify": "uglifyjs dist/vendor.bundle.js --screw-ie8 --compress --mangle --output dist/vendor.bundle.min.js"
+    "minify": "uglifyjs dist/vendor.bundle.js --screw-ie8 --compress --mangle --output dist/vendor.bundle.min.js",
+    "minify_mobile": "uglifyjs mobile_app/www/vendor.bundle.js --screw-ie8 --compress --mangle --output mobile_app/www/vendor.bundle.min.js"
   },
   "private": true,
   "dependencies": {
