@@ -7,13 +7,21 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
-        },
         "cordova-fs-plugin-fullscreen": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         },
         "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "cordova-plugin-crosswalk-webview": {
+            "XWALK_VERSION": "22+",
+            "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
+            "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
+            "XWALK_MODE": "lite",
+            "XWALK_MULTIPLEAPK": "true",
             "PACKAGE_NAME": "io.cordova.hellocordova"
         }
     },

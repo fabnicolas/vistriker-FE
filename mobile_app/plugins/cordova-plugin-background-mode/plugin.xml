@@ -23,7 +23,7 @@
     <!-- cordova -->
     <engines>
         <engine name="cordova" version="&gt;=3.0.0" />
-        <engine name="android-sdk" version="&gt;=16" />
+        <engine name="android-sdk" version="&gt;=14" />
         <engine name="windows-sdk" version="&gt;=10.0.14393.0" />
     </engines>
 

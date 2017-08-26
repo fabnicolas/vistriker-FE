@@ -19,6 +19,10 @@
 
 package org.apache.cordova;
 
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.LOG;
+import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -30,20 +34,17 @@ import android.content.IntentFilter;
 import android.telephony.TelephonyManager;
 import android.view.KeyEvent;
 
-import java.lang.reflect.Field;
 import java.util.HashMap;
 
 /**
  * This class exposes methods in Cordova that can be called from JavaScript.
  */
-public class CoreAndroid extends CordovaPlugin {
+class CoreAndroid extends CordovaPlugin {
 
     public static final String PLUGIN_NAME = "CoreAndroid";
     protected static final String TAG = "CordovaApp";
     private BroadcastReceiver telephonyReceiver;
     private CallbackContext messageChannel;
-    private PluginResult pendingResume;
-    private final Object messageChannelLock = new Object();
 
     /**
      * Send an event to be fired on the Javascript side.
@@ -111,13 +112,7 @@ public class CoreAndroid extends CordovaPlugin {
                 this.exitApp();
             }
 			else if (action.equals("messageChannel")) {
-                synchronized(messageChannelLock) {
-                    messageChannel = callbackContext;
-                    if (pendingResume != null) {
-                        sendEventMessage(pendingResume);
-                        pendingResume = null;
-                    }
-                }
+                messageChannel = callbackContext;
                 return true;
             }
 
@@ -253,9 +248,6 @@ public class CoreAndroid extends CordovaPlugin {
         else if (button.equals("volumedown")) {
             webView.setButtonPlumbedToJs(KeyEvent.KEYCODE_VOLUME_DOWN, override);
         }
-        else if (button.equals("menubutton")) {
-            webView.setButtonPlumbedToJs(KeyEvent.KEYCODE_MENU, override);
-        }
     }
 
     /**
@@ -321,13 +313,10 @@ public class CoreAndroid extends CordovaPlugin {
         } catch (JSONException e) {
             LOG.e(TAG, "Failed to create event message", e);
         }
-        sendEventMessage(new PluginResult(PluginResult.Status.OK, obj));
-    }
-
-    private void sendEventMessage(PluginResult payload) {
-        payload.setKeepCallback(true);
+        PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, obj);
+        pluginResult.setKeepCallback(true);
         if (messageChannel != null) {
-            messageChannel.sendPluginResult(payload);
+            messageChannel.sendPluginResult(pluginResult);
         }
     }
 
@@ -338,53 +327,5 @@ public class CoreAndroid extends CordovaPlugin {
     public void onDestroy()
     {
         webView.getContext().unregisterReceiver(this.telephonyReceiver);
-    }
-
-    /**
-     * Used to send the resume event in the case that the Activity is destroyed by the OS
-     *
-     * @param resumeEvent PluginResult containing the payload for the resume event to be fired
-     */
-    public void sendResumeEvent(PluginResult resumeEvent) {
-        // This operation must be synchronized because plugin results that trigger resume
-        // events can be processed asynchronously
-        synchronized(messageChannelLock) {
-            if (messageChannel != null) {
-                sendEventMessage(resumeEvent);
-            } else {
-                // Might get called before the page loads, so we need to store it until the
-                // messageChannel gets created
-                this.pendingResume = resumeEvent;
-            }
-        }
-    }
-
-      /*
-     * This needs to be implemented if you wish to use the Camera Plugin or other plugins
-     * that read the Build Configuration.
-     *
-     * Thanks to Phil@Medtronic and Graham Borland for finding the answer and posting it to
-     * StackOverflow.  This is annoying as hell!
-     *
-     */
-
-    public static Object getBuildConfigValue(Context ctx, String key)
-    {
-        try
-        {
-            Class<?> clazz = Class.forName(ctx.getPackageName() + ".BuildConfig");
-            Field field = clazz.getField(key);
-            return field.get(null);
-        } catch (ClassNotFoundException e) {
-            LOG.d(TAG, "Unable to get the BuildConfig, is this built with ANT?");
-            e.printStackTrace();
-        } catch (NoSuchFieldException e) {
-            LOG.d(TAG, key + " is not a valid field. Check your build.gradle");
-        } catch (IllegalAccessException e) {
-            LOG.d(TAG, "Illegal Access Exception: Let's print a stack trace.");
-            e.printStackTrace();
-        }
-
-        return null;
     }
 }

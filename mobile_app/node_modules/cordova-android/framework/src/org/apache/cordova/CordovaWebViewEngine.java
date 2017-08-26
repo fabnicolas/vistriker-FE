@@ -20,10 +20,9 @@ package org.apache.cordova;
 
 import android.view.KeyEvent;
 import android.view.View;
-import android.webkit.ValueCallback;
 
 /**
- * Interface for all Cordova engines.
+ * Interfcae for all Cordova engines.
  * No methods will be added to this class (in order to be compatible with existing engines).
  * Instead, we will create a new interface: e.g. CordovaWebViewEngineV2
  */
@@ -58,9 +57,6 @@ public interface CordovaWebViewEngine {
 
     /** Clean up all resources associated with the WebView. */
     void destroy();
-
-    /** Add the evaulate Javascript method **/
-    void evaluateJavascript(String js, ValueCallback<String> callback);
 
     /**
      * Used to retrieve the associated CordovaWebView given a View without knowing the type of Engine.

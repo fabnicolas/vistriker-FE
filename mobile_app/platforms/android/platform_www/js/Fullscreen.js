@@ -14,4 +14,3 @@ module.exports = {
         exec(successCallback, errorCallback, 'Fullscreen', 'off', []);
     },
 };
-
