@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  backend_url: 'https://telegrambots-shockgen.rhcloud.com/vistriker-BE'
+  backend_url: 'https://openshift-cartridge-nodejs-template-qywyeemmxb.now.sh/vistriker-BE'
 };

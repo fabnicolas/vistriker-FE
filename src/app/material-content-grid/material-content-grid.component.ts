@@ -2,6 +2,8 @@ import { Input, Output, EventEmitter, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Http } from '@angular/http';
 import { environment } from '../../environments/environment';
+import { Observable } from 'rxjs/Rx';
+
 
 import 'rxjs/add/operator/map'
 
@@ -28,16 +30,18 @@ export class MaterialContentGridComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.route.data.subscribe(
-      dataroute => {console.log("ok");this.channel_name=dataroute.channel;}, null, function(){console.log("ok");
-        this.route.queryParams.subscribe(params => {
-          if(params['channel_name']=='') this.channel_name=params['channel_name'];
-        }, null, function(){
-          this.http.get(environment.backend_url+'/get_videos/'+this.channel_name)
-           .map(response => response.json())
-           .subscribe(res => this.arr_videos = res);
-        });
-    });
+    Observable.forkJoin(      
+      this.route.data,
+      this.route.queryParams
+    ).subscribe(data => {
+        console.log("Data:"+data);
+      }
+    )
+    this.channel_name = 'Zeb89';
+
+    this.http.get(environment.backend_url+'/get_videos/'+this.channel_name)
+      .map(response => response.json())
+        .subscribe(res => this.arr_videos = res);
   }
 
   onResize(event) {
