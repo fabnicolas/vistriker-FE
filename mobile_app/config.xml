@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="finalgalaxy.vistriker" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>ViStriker</name>
     <description>
-        ViStriker, signore e signori!
+        ViStriker is a web and mobile application that lets you browse YouTube videos of your favorite channels with a different UI.
     </description>
     <author email="finalgalaxy@gmail.com" href="http://finalgalaxy.github.io/vistriker-FE/">
         Finalgalaxy

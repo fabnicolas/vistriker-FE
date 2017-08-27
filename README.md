@@ -13,7 +13,9 @@ Node.js is running as backend to serve YouTube metadata. Check https://github.co
 
 ## Android APK
 The APK you will build is developed using Cordova 7.0.0 w/ CrossWalk 2.3.0.
-Follow those instructions if you want to build the APK.
+To install the mobile application, you can:
+- Download it from Aptoide: https://vistriker.it.aptoide.com/
+- Follow those instructions to build an armv7/x86 APK for your mobile device.
 
 ### Prerequirements
 
