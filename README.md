@@ -25,7 +25,7 @@ Cordova: `npm install -g cordova@7.0.0`
 cd mobile_app
 npm run build_android
 ```
-- Path: C:\projects_folder\vistriker-FE\mobile_app\platforms\android\build\outputs\apk
+- Path: {{ROOT_REPO}}\mobile_app\platforms\android\build\outputs\apk
 - armv7 and x86 APK versions will be included
 
 ### Testing with AVD emulator installed
