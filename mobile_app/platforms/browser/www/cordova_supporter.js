@@ -1,9 +1,7 @@
 var CordovaSupporter = (function(){
     this.fullscreen=function(status){
-        if(typeof Fullscreen !== 'undefined'){
-            if(status==true) Fullscreen.on();
-            else             Fullscreen.off();
-        }
+        if(status) AndroidFullScreen.immersiveMode()
+        else       AndroidFullScreen.showSystemUI();
     };
     this.backgroundMode=function(status){
         cordova.plugins.backgroundMode.setEnabled(status);

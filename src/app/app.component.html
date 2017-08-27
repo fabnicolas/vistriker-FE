@@ -6,10 +6,12 @@
         <a [routerLink]="['channel/Quei due sul Server']">QDSS</a><br/>
         <a [routerLink]="['channel/Quei due sul Server 2']">QDSS 2</a><br/>
         <a [routerLink]="['channel/Parliamo di Videogiochi']">PDV</a><br/>
-        <a [routerLink]="['channel/yamato animation ']">Yamato Animation</a><br/>
+        <a [routerLink]="['channel/yamato animation']">Yamato Animation</a><br/>
         <a [routerLink]="['channel/NoCopyrightSounds']">NoCopyrightSounds</a><br/>
         <a [routerLink]="['channel/SamuX']">SamuX</a><br/>
         <a [routerLink]="['channel/Pyrocynical']">Pyrocynical</a><br/>
+        <br/><br/>
+        <a href="http://www.youtube.com">Open YouTube instead</a>
     </div>
 
     <div custom-sidenav-content>
@@ -18,8 +20,9 @@
                 <md-icon>menu</md-icon>
             </button>
             <a [routerLink]="['/']"><b>V</b>i<b>S</b>triker</a>
-            <span class="example-fill-remaining-space"></span>
+            <span class="example-fill-remaining-space"></span>&nbsp;&nbsp;[
             <app-input-search-channel></app-input-search-channel>
+            ]
         </app-material-toolbar>
         <router-outlet></router-outlet>
     </div>
