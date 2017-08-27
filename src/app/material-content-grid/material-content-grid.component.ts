@@ -4,7 +4,6 @@ import { Http } from '@angular/http';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs/Rx';
 
-
 import 'rxjs/add/operator/map'
 
 @Component({
@@ -30,18 +29,19 @@ export class MaterialContentGridComponent implements OnInit {
   }
 
   ngOnInit() {
-    Observable.forkJoin(      
+    Observable.combineLatest(      
       this.route.data,
-      this.route.queryParams
-    ).subscribe(data => {
-        console.log("Data:"+data);
+      this.route.params,
+      (data, queryParams) => ({data, queryParams})
+    ).subscribe(provider => {
+      console.log(provider);
+       if(provider.queryParams['channel_name'] != undefined) this.channel_name = provider.queryParams['channel_name'];
+       else                                                  this.channel_name = provider.data['channel'];
+       this.http.get(environment.backend_url+'/get_videos/'+this.channel_name)
+       .map(response => response.json())
+         .subscribe(res => this.arr_videos = res);
       }
     )
-    this.channel_name = 'Zeb89';
-
-    this.http.get(environment.backend_url+'/get_videos/'+this.channel_name)
-      .map(response => response.json())
-        .subscribe(res => this.arr_videos = res);
   }
 
   onResize(event) {
