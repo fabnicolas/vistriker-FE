@@ -1,27 +1,27 @@
 {
-  "_from": "cordova-plugin-crosswalk-webview@2.2.0",
-  "_id": "cordova-plugin-crosswalk-webview@2.2.0",
+  "_from": "cordova-plugin-crosswalk-webview@2.3.0",
+  "_id": "cordova-plugin-crosswalk-webview@2.3.0",
   "_inBundle": false,
-  "_integrity": "sha1-tbd4HjqROwGABWV9NHzbcm/ZLlM=",
+  "_integrity": "sha1-4u407P2t3YS9qE5yZjU55AyZ0yQ=",
   "_location": "/cordova-plugin-crosswalk-webview",
   "_phantomChildren": {},
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "cordova-plugin-crosswalk-webview@2.2.0",
+    "raw": "cordova-plugin-crosswalk-webview@2.3.0",
     "name": "cordova-plugin-crosswalk-webview",
     "escapedName": "cordova-plugin-crosswalk-webview",
-    "rawSpec": "2.2.0",
+    "rawSpec": "2.3.0",
     "saveSpec": null,
-    "fetchSpec": "2.2.0"
+    "fetchSpec": "2.3.0"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/cordova-plugin-crosswalk-webview/-/cordova-plugin-crosswalk-webview-2.2.0.tgz",
-  "_shasum": "b5b7781e3a913b018005657d347cdb726fd92e53",
-  "_spec": "cordova-plugin-crosswalk-webview@2.2.0",
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-crosswalk-webview/-/cordova-plugin-crosswalk-webview-2.3.0.tgz",
+  "_shasum": "e2ee34ecfdaddd84bda84e72663539e40c99d324",
+  "_spec": "cordova-plugin-crosswalk-webview@2.3.0",
   "_where": "C:\\projects_folder\\vistriker-FE\\mobile_app\\node_modules",
   "author": "",
   "bugs": {
@@ -71,5 +71,5 @@
     "type": "git",
     "url": "git+https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview.git"
   },
-  "version": "2.2.0"
+  "version": "2.3.0"
 }

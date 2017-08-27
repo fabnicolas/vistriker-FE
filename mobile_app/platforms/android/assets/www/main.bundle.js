@@ -1079,7 +1079,7 @@ var VideoViewComponent = (function () {
         this.route = route;
     }
     VideoViewComponent.prototype.getVideoUrl = function () {
-        return "https://www.youtube.com/embed/" + this.video_id + "?rel=1&loop=1&autoplay=1" +
+        return "https://www.youtube.com/embed/" + this.video_id + "?rel=1&loop=1&autoplay=1&feature=player_embedded" +
             "&showinfo=0&controls=1&autohide=1&playlist=" + this.video_id;
     };
     VideoViewComponent.prototype.ngOnInit = function () {

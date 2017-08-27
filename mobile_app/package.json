@@ -11,9 +11,10 @@
     "license": "Apache-2.0",
     "dependencies": {
         "cordova-android": "^4.1.0",
+        "cordova-browser": "^4.1.0",
         "cordova-fs-plugin-fullscreen": "git+https://github.com/filfat-Studios-AB/cordova-plugin-fullscreen.git",
         "cordova-plugin-background-mode": "^0.7.2",
-        "cordova-plugin-crosswalk-webview": "^2.2.0",
+        "cordova-plugin-crosswalk-webview": "^2.3.0",
         "cordova-plugin-device": "^1.1.6",
         "cordova-plugin-whitelist": "^1.3.2"
     },
@@ -23,15 +24,16 @@
             "cordova-fs-plugin-fullscreen": {},
             "cordova-plugin-background-mode": {},
             "cordova-plugin-crosswalk-webview": {
-                "XWALK_MODE": "lite",
-                "XWALK_VERSION": "22+",
+                "XWALK_VERSION": "23+",
                 "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
                 "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
+                "XWALK_MODE": "embedded",
                 "XWALK_MULTIPLEAPK": "true"
             }
         },
         "platforms": [
-            "android"
+            "android",
+            "browser"
         ]
     }
 }

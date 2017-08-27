@@ -33,7 +33,7 @@ module.exports.metadata =
     "cordova-plugin-device": "1.1.6",
     "cordova-plugin-background-mode": "0.7.2",
     "cordova-plugin-whitelist": "1.3.2",
-    "cordova-plugin-crosswalk-webview": "2.2.0"
+    "cordova-plugin-crosswalk-webview": "2.3.0"
 };
 // BOTTOM OF METADATA
 });
