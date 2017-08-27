@@ -1,5 +1,4 @@
-# ViStriker
-(Alpha version)
+# ViStriker [Alpha version!]
 ViStriker is a web and mobile application that lets you browse YouTube videos of your favorite channels with a different UI. The goal is to provide a better user experience for the end-user and to support additional upcoming features.
 
 This project is built for Web and Mobile (Hybrid Application) from a SINGLE codebase.
