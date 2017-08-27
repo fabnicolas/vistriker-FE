@@ -26,6 +26,7 @@ Cordova: `npm install -g cordova@7.0.0`
 ### Compiling phase
 ```
 cd mobile_app
+npm install
 npm run build_android
 ```
 - Path: {{ROOT_REPO}}\mobile_app\platforms\android\build\outputs\apk
