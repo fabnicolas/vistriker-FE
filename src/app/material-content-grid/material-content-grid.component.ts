@@ -29,19 +29,8 @@ export class MaterialContentGridComponent implements OnInit {
   }
 
   ngOnInit() {
-    Observable.combineLatest(      
-      this.route.data,
-      this.route.params,
-      (data, queryParams) => ({data, queryParams})
-    ).subscribe(provider => {
-      console.log(provider);
-       if(provider.queryParams['channel_name'] != undefined) this.channel_name = provider.queryParams['channel_name'];
-       else                                                  this.channel_name = provider.data['channel'];
-       this.http.get(environment.backend_url+'/get_videos/'+this.channel_name)
-       .map(response => response.json())
-         .subscribe(res => this.arr_videos = res);
-      }
-    )
+    this.route.data.subscribe(data => this.loadChannel(data));
+    this.route.params.subscribe(params => this.loadChannel(params));
   }
 
   onResize(event) {
@@ -53,6 +42,18 @@ export class MaterialContentGridComponent implements OnInit {
     else if(width < 750) this.numcols=2;
     else if(width < 950) this.numcols=4;
     else                 this.numcols=6;
+  }
+
+  loadChannel(param_loaded){
+    let param_channel;
+    if(param_loaded.hasOwnProperty('channel'))            param_channel=param_loaded['channel']
+    else if(param_loaded.hasOwnProperty('channel_name'))  param_channel=param_loaded['channel_name']
+    if(!this.channel_name || this.channel_name != param_channel){
+      this.channel_name = param_channel;
+      this.http.get(environment.backend_url+'/get_videos/'+this.channel_name)
+        .map(response => response.json())
+        .subscribe(res => this.arr_videos = res);
+    }
   }
 
 }
