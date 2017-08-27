@@ -1,10 +1,23 @@
+var CordovaSupporter = (function(){
+    this.fullscreen=function(status){
+        if(status) AndroidFullScreen.immersiveMode()
+        else       AndroidFullScreen.showSystemUI();
+    };
+    this.backgroundMode=function(status){
+        cordova.plugins.backgroundMode.setEnabled(status);
+    };
+    return this;
+})();
+
+
+
 document.addEventListener('deviceready', function(){
-    Fullscreen.on();
-    cordova.plugins.backgroundMode.setEnabled(true);
+    CordovaSupporter.fullscreen(true);
+    CordovaSupporter.backgroundMode(true);
 });
 
 document.addEventListener('resume', function(){
-    Fullscreen.on();
+    CordovaSupporter.fullscreen(true);
 });
 
 /*

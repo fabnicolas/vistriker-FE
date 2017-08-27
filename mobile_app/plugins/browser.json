@@ -7,9 +7,6 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-fs-plugin-fullscreen": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
-        },
         "cordova-plugin-background-mode": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         },
@@ -17,6 +14,9 @@
             "PACKAGE_NAME": "io.cordova.hellocordova"
         },
         "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "cordova-plugin-fullscreen": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         }
     },

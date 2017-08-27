@@ -7,14 +7,6 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-fs-plugin-fullscreen": {
-        "source": {
-            "type": "registry",
-            "id": "https://github.com/filfat-Studios-AB/cordova-plugin-fullscreen"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "cordova-plugin-background-mode": {
         "source": {
             "type": "registry",
@@ -35,6 +27,14 @@
         "source": {
             "type": "registry",
             "id": "cordova-plugin-crosswalk-webview@2.3.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-fullscreen": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-fullscreen"
         },
         "is_top_level": true,
         "variables": {}

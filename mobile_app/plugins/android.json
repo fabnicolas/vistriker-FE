@@ -7,9 +7,6 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-fs-plugin-fullscreen": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
-        },
         "cordova-plugin-background-mode": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         },
@@ -22,6 +19,9 @@
             "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
             "XWALK_MODE": "embedded",
             "XWALK_MULTIPLEAPK": "true",
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "cordova-plugin-fullscreen": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         }
     },

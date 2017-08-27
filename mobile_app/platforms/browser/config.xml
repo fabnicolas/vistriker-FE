@@ -27,5 +27,4 @@
     <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="19" />
     <preference name="AllowInlineMediaPlayback" value="true" />
     <preference name="MediaPlaybackRequiresUserAction" value="false" />
-    <preference name="xwalkMode" value="lite" />
 </widget>

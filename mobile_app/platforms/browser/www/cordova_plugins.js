@@ -1,14 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/cordova-fs-plugin-fullscreen/www/Fullscreen.js",
-        "id": "cordova-fs-plugin-fullscreen.Fullscreen",
-        "pluginId": "cordova-fs-plugin-fullscreen",
-        "clobbers": [
-            "Fullscreen"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-device/www/device.js",
         "id": "cordova-plugin-device.device",
         "pluginId": "cordova-plugin-device",
@@ -36,16 +28,24 @@ module.exports = [
         "id": "cordova-plugin-background-mode.BackgroundMode.Proxy",
         "pluginId": "cordova-plugin-background-mode",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-fullscreen/www/AndroidFullScreen.js",
+        "id": "cordova-plugin-fullscreen.AndroidFullScreen",
+        "pluginId": "cordova-plugin-fullscreen",
+        "clobbers": [
+            "AndroidFullScreen"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "cordova-fs-plugin-fullscreen": "1.0.2",
     "cordova-plugin-device": "1.1.6",
     "cordova-plugin-background-mode": "0.7.2",
     "cordova-plugin-whitelist": "1.3.2",
-    "cordova-plugin-crosswalk-webview": "2.3.0"
+    "cordova-plugin-crosswalk-webview": "2.3.0",
+    "cordova-plugin-fullscreen": "1.1.0"
 }
 // BOTTOM OF METADATA
 });

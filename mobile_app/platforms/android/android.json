@@ -9,10 +9,6 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"Fullscreen\"><param name=\"android-package\" value=\"com.filfatstudios.fullscreen.Fullscreen\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
                             "count": 1
                         },
@@ -59,6 +55,10 @@
                         {
                             "xml": "<preference name=\"android-minSdkVersion\" value=\"16\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AndroidFullScreen\"><param name=\"android-package\" value=\"com.mesmotronic.plugins.FullScreenPlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -92,9 +92,6 @@
         }
     },
     "installed_plugins": {
-        "cordova-fs-plugin-fullscreen": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
-        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         },
@@ -111,18 +108,13 @@
             "XWALK_MODE": "embedded",
             "XWALK_MULTIPLEAPK": "true",
             "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "cordova-plugin-fullscreen": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
         }
     },
     "dependent_plugins": {},
     "modules": [
-        {
-            "id": "cordova-fs-plugin-fullscreen.Fullscreen",
-            "file": "plugins/cordova-fs-plugin-fullscreen/www/Fullscreen.js",
-            "pluginId": "cordova-fs-plugin-fullscreen",
-            "clobbers": [
-                "Fullscreen"
-            ]
-        },
         {
             "id": "cordova-plugin-device.device",
             "file": "plugins/cordova-plugin-device/www/device.js",
@@ -139,13 +131,21 @@
                 "cordova.plugins.backgroundMode",
                 "plugin.backgroundMode"
             ]
+        },
+        {
+            "id": "cordova-plugin-fullscreen.AndroidFullScreen",
+            "file": "plugins/cordova-plugin-fullscreen/www/AndroidFullScreen.js",
+            "pluginId": "cordova-plugin-fullscreen",
+            "clobbers": [
+                "AndroidFullScreen"
+            ]
         }
     ],
     "plugin_metadata": {
-        "cordova-fs-plugin-fullscreen": "1.0.2",
         "cordova-plugin-device": "1.1.6",
         "cordova-plugin-background-mode": "0.7.2",
         "cordova-plugin-whitelist": "1.3.2",
-        "cordova-plugin-crosswalk-webview": "2.3.0"
+        "cordova-plugin-crosswalk-webview": "2.3.0",
+        "cordova-plugin-fullscreen": "1.1.0"
     }
 }

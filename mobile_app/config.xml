@@ -30,7 +30,6 @@
     <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="19" />
     <engine name="android" spec="^4.1.0" />
     <engine name="browser" spec="^4.1.0" />
-    <plugin name="cordova-fs-plugin-fullscreen" spec="git+https://github.com/filfat-Studios-AB/cordova-plugin-fullscreen.git" />
     <plugin name="cordova-plugin-background-mode" spec="^0.7.2" />
     <plugin name="cordova-plugin-crosswalk-webview" spec="^2.3.0">
         <variable name="XWALK_VERSION" value="23+" />
@@ -39,5 +38,6 @@
         <variable name="XWALK_MODE" value="embedded" />
         <variable name="XWALK_MULTIPLEAPK" value="true" />
     </plugin>
+    <plugin name="cordova-plugin-fullscreen" spec="^1.2.0" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
 </widget>
