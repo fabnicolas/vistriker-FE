@@ -45,4 +45,6 @@
     <preference name="android-minSdkVersion" value="16" />
     <preference name="AllowInlineMediaPlayback" value="true" />
     <preference name="MediaPlaybackRequiresUserAction" value="false" />
+    <preference name="OverrideUserAgent" value="Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20120101 Firefox/33.0" />
+    <preference name="xwalkUserAgent" value="Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20120101 Firefox/33.0" />
 </widget>

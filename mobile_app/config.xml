@@ -20,6 +20,8 @@
     <preference name="MediaPlaybackRequiresUserAction" value="false" />
     <allow-navigation href="*youtube*" />
     <allow-navigation href="*ytimg*" />
+    <preference name="OverrideUserAgent" value="Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20120101 Firefox/33.0" />
+    <preference name="xwalkUserAgent" value="Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20120101 Firefox/33.0" />
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>

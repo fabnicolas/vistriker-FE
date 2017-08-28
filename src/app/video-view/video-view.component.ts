@@ -1,4 +1,4 @@
-import { ViewChild, Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { RouterModule, ActivatedRoute } from '@angular/router';
 import * as YT_IFrame_API from './ytiframeapi'
 
@@ -11,7 +11,7 @@ import * as YT_IFrame_API from './ytiframeapi'
 export class VideoViewComponent implements OnInit, AfterViewInit {
   private route: ActivatedRoute;
   video_id: string;
-  @ViewChild('ytdivplayer') ytdivplayer;
+  youtube_player: any;
 
   getVideoId(){
     return this.video_id;
@@ -32,11 +32,13 @@ export class VideoViewComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     console.log(YT_IFrame_API)
     YT_IFrame_API.load(function(YT) {
-      new YT.Player('player', {
+      var ytplayer=new YT.Player('player', {
         height: '100%',
         width: '100%',
-        videoId: 'M7lc1UVf-VE'
+        videoId: 'M7lc1UVf-VE',
+        playerVars: {controls: 1, showinfo: 0, autoplay: 1, rel: 0, modestbranding: 1}
       });
+      console.log(ytplayer);
     });
   }
 

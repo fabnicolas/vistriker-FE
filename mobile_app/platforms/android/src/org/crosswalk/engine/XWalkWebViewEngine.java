@@ -77,6 +77,7 @@ public class XWalkWebViewEngine implements CordovaWebViewEngine {
     protected NativeToJsMessageQueue nativeToJsMessageQueue;
     protected XWalkActivityDelegate activityDelegate;
     protected String startUrl;
+    public static final String PREF_USER_AGENT = "xwalkUserAgent";
     protected CordovaPreferences preferences;
 
     /** Used when created via reflection. */
@@ -209,6 +210,9 @@ public class XWalkWebViewEngine implements CordovaWebViewEngine {
         if (!appendUserAgent.isEmpty()) {
             webView.setUserAgentString(webView.getUserAgentString() + " " + appendUserAgent);
         }
+
+        String xwalkUserAgent2 = preferences.getString(PREF_USER_AGENT, "");
+        webView.setUserAgentString(xwalkUserAgent2);
         
         if (preferences.contains("BackgroundColor")) {
             int backgroundColor = preferences.getInteger("BackgroundColor", Color.BLACK);

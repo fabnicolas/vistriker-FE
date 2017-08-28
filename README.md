@@ -176,3 +176,12 @@ Remember to use `--device` flag if you want to force your application to run on 
 Target for this project is Android ICS 4.1.0 (minSdkVersion=16) thanks to CrossWalk.
 
 NOTICE: On ICS emulator (Nexus 4 API 16) I couldn't be able to play YouTube videos using `<iframe>`. This however works on a real device, which is what matters for production use.
+
+### Using YouTube Desktop controls in Cordova
+Thanks to https://stackoverflow.com/a/32925922 , I managed to enable YouTube Desktop controls in APK.
+
+In case you want to update android platform... remind to apply those changes.
+
+Usually it's not necessary to update android platform in Cordova.
+
+However, use the following User Agent string: `Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20120101 Firefox/33.0`.
