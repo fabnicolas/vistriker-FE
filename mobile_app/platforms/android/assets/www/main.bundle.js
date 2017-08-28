@@ -1132,11 +1132,12 @@ var VideoViewComponent = (function () {
     };
     VideoViewComponent.prototype.ngAfterViewInit = function () {
         console.log(__WEBPACK_IMPORTED_MODULE_1__ytiframeapi__);
+        var _yt_video_reference = this;
         __WEBPACK_IMPORTED_MODULE_1__ytiframeapi__["load"](function (YT) {
             var ytplayer = new YT.Player('player', {
                 height: '100%',
                 width: '100%',
-                videoId: 'M7lc1UVf-VE',
+                videoId: _yt_video_reference.video_id,
                 playerVars: { controls: 1, showinfo: 0, autoplay: 1, rel: 0, modestbranding: 1 }
             });
             console.log(ytplayer);
@@ -1172,7 +1173,6 @@ var YT_IFrame_API = ({
 
 	done: function(){
         while(this.arr_listeners.length>0)    this.arr_listeners.pop()(window.YT);
-        delete this.arr_listeners;
         delete window.onYouTubeIframeAPIReady;
     },
     
