@@ -12,6 +12,8 @@ This is a MEAN stack project. It actually uses:
 ## Web Application
 https://finalgalaxy.github.io/vistriker-FE/
 
+![ViStriker Yamato Animation Screenshot](http://i.imgur.com/QSGQ747.png)
+
 This deploy is ES5-based. It is actually built in production mode thanks to Angular 4/TypeScript, which applications are written using ES6 standards and then transpiled using polyfills.
 
 Node.js is running as backend to serve YouTube metadata. Check backend repository for server details.
@@ -21,11 +23,13 @@ This is, of course, an application frontend.
 If you would like to check application backend, check this repository: https://github.com/Finalgalaxy/vistriker-BE .
 
 ## Android APK
+https://vistriker.it.aptoide.com/
+
 The APK you will build is developed using Cordova 7.0.0 w/ CrossWalk 2.3.0.
 
 To install the mobile application, you can:
-- Download it from Aptoide: https://vistriker.it.aptoide.com/
 - Follow next instructions to build an armv7/x86 APK to install on any Android device (From ICS).
+- Or download the aptoide release at the link above.
 
 ## Prerequirements for Web and Mobile
 
@@ -125,7 +129,7 @@ Process `build_android` executes Cordova in order to produce your APK.
 ```
 npm run build_mobile
 ```
-So `angular-cli` can produce inside `mobile_app/www`, without destroy the folder, those files: `index.html`, CSS styles and Angular JS bundles and maps.
+Doing this, `angular-cli` will produce inside `mobile_app/www`, those files: `index.html`, CSS styles and Angular JS bundles and maps; this is done without destroy the folder, which contains Cordova support files to add features to your Android APK.
 
 1.1) You can (optionally) run: `npm run minify_mobile`.
 It does the same as `npm run minify`, but inside `mobile_app/www`. Check minify section above.
@@ -136,7 +140,7 @@ It does the same as `npm run minify`, but inside `mobile_app/www`. Check minify 
 <script type="text/javascript" src="cordova_supporter.js"></script>
 ```
 
-So Cordova can use its plugin to provide additional features to the application, such as:
+So Cordova uses its plugins to provide additional features to the application, such as:
 - Background mode;
 - CrossWalk support (Custom WebView to run Angular);
 - Fullscreen immersive mode.
