@@ -17,7 +17,6 @@ var YT_IFrame_API = ({
 
 	done: function(){
         while(this.arr_listeners.length>0)    this.arr_listeners.pop()(window.YT);
-        delete this.arr_listeners;
         delete window.onYouTubeIframeAPIReady;
     },
     

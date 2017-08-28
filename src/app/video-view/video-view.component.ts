@@ -31,11 +31,12 @@ export class VideoViewComponent implements OnInit, AfterViewInit {
   
   ngAfterViewInit() {
     console.log(YT_IFrame_API)
+    var _yt_video_reference=this;
     YT_IFrame_API.load(function(YT) {
       var ytplayer=new YT.Player('player', {
         height: '100%',
         width: '100%',
-        videoId: 'M7lc1UVf-VE',
+        videoId: _yt_video_reference.video_id,
         playerVars: {controls: 1, showinfo: 0, autoplay: 1, rel: 0, modestbranding: 1}
       });
       console.log(ytplayer);
