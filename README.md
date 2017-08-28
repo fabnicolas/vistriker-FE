@@ -75,8 +75,18 @@ Want to try the production build locally? Easy: install `npm install -g angular-
 cd dist
 angular-http-server -p 4200
 ```
+Then go to http://localhost:4200/vistriker-FE/ .
 
 Enjoy!
+
+### Change 'vistriker-FE' string
+I suggest to change `/vistriker-FE/` as you need with `/` or `/YOUR_REPOSITORY_NAME`.
+
+Change it in `package.json` inside `build` script. Change it also in `404.html` (If you need this file) at the following row:
+```html
+<meta http-equiv="refresh" content="0;URL='/vistriker-FE/'"></meta>
+```
+`404.html` and `index.html` redirect scripts are needed to fix a bug regarding some static web servers, for example GitHub pages. Routes, as by default, don't work in Angular 4 when you refresh the page, in some contexts. I added https://github.com/csuwildcat/sghpa hack to this project to fix this bug. Unfortunately I don't find a way to automatically copy BASE_HREF_URL inside 404.html --- That's why you must change it manually.
 
 ### Optimize Web app (OPTIONAL)
 ```
@@ -89,7 +99,7 @@ Usually this is necessary because bundle sizes weights 3-10 MB, which is absolut
 ### Deploy Web app on GitHub pages
 GitHub offers a service called GitHub pages where you can host static files such as HTML, CSS and JS files.
 
-This is perfect for deploying Angular 4 production files!
+This is a very good, free solution for Angular 4 deployment.
 
 You can deploy this Angular 4 Web application on GitHub pages this way:
 ```
