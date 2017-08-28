@@ -48,7 +48,7 @@ Install Cordova through NPM: `npm install -g cordova@7.0.0`
 ### Backend
 Check backend repository for details (Link is at beginning of README).
 
-## Running and make your Web app production-ready
+## Run and make your Web app production-ready
 Do you want to run this project that is made in Angular4/TypeScript? Here you go.
 
 ### Dependencies install
@@ -107,7 +107,7 @@ git push -f origin gh-pages:gh-pages
 git branch -D gh-pages
 ```
 
-## Building Android APK and updating it
+## Build Android APK and update it
 Do you want to build your APK using Cordova, CrossWalk and Angular4/TypeScript production files? Just follow those instructions.
 
 ### Dependencies install
