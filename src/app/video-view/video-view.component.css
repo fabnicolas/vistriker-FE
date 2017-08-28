@@ -6,3 +6,7 @@
 :host iframe{
     flex: 1;
 }
+
+:host div.youtube-player{
+    flex: 1;
+}
