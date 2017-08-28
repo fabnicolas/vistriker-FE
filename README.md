@@ -17,10 +17,12 @@ This deploy is ES5-based. It is actually built in production mode thanks to Angu
 Node.js is running as backend to serve YouTube metadata. Check backend repository for server details.
 
 This is, of course, an application frontend.
+
 If you would like to check application backend, check this repository: https://github.com/Finalgalaxy/vistriker-BE .
 
 ## Android APK
 The APK you will build is developed using Cordova 7.0.0 w/ CrossWalk 2.3.0.
+
 To install the mobile application, you can:
 - Download it from Aptoide: https://vistriker.it.aptoide.com/
 - Follow next instructions to build an armv7/x86 APK to install on any Android device (From ICS).
@@ -40,11 +42,12 @@ Install Cordova through NPM: `npm install -g cordova@7.0.0`
 ### Backend
 Check backend repository for details (Link is at beginning of README).
 
-## Running and producing your Web app
+## Running and make your Web app production-ready
 Do you want to run this project that is made in Angular4/TypeScript? Here you go.
 
 ### Dependencies install
 Run `npm install` to install dependencies.
+
 Run also `npm install -g angular-http-server` if you want to run production files after build process.
 
 ### Run Web app
