@@ -5,26 +5,17 @@ var YT_IFrame_API = ({
 	    var _ytiapi_context = this;
 		this.arr_listeners.push(callback);
 
-        if(this.isAPIloaded) {
-			setTimeout(function(){_ytiapi_context.done();});
-			return;
-		}
-
-		if(this.isAPIloading) {
-			return;
-		}
-
+        if(this.isAPIloaded){setTimeout(function(){_ytiapi_context.done();});return;}
+		if(this.isAPIloading) return;
 		this.isAPIloading = true;
-
 		window.onYouTubeIframeAPIReady = function() {
 		    _ytiapi_context.isAPIloaded = true;
 			_ytiapi_context.done();
         };
-        
         this.attachYouTubeIframeAPI();
 	},
 
-	done: function() {
+	done: function(){
 		while(this.arr_listeners.length>0)    this.arr_listeners.pop()(window.YT);
         delete window.onYouTubeIframeAPIReady;
     },
