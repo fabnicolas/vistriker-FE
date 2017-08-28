@@ -25,6 +25,8 @@ If you would like to check application backend, check this repository: https://g
 ## Android APK
 https://vistriker.it.aptoide.com/
 
+![ViStriker Mobile App](http://i.imgur.com/H5URApR.png)
+
 The APK you will build is developed using Cordova 7.0.0 w/ CrossWalk 2.3.0.
 
 To install the mobile application, you can:
