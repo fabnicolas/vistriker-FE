@@ -35,8 +35,8 @@ export class InputSearchChannelComponent {
                : this.default_channel_list;
   }
 
-  autoSubmitOnIdle(){
-    let input_search=this.inputSuggestsController.value;
+  autoSubmitOnIdle(selection:string=null){
+    let input_search=(!selection) ? this.inputSuggestsController.value : selection;
     if(this.autoSubmitInput) clearTimeout(this.autoSubmitInput);
     this.autoSubmitInput = setTimeout(() => {
       if(input_search) this.service_SearchChannelData.setActualChannelName(input_search);

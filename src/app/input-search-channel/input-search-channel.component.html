@@ -3,7 +3,7 @@
 </md-input-container>
 
 <md-autocomplete #auto="mdAutocomplete">
-  <md-option *ngFor="let suggest of filteredSuggests | async" [value]="suggest">
+  <md-option (onSelectionChange)="autoSubmitOnIdle(suggest)" *ngFor="let suggest of filteredSuggests | async" [value]="suggest">
     {{ suggest }}
   </md-option>
 </md-autocomplete>
