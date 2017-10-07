@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { SearchChannelDataService } from '../search-channel-data.service';
+import { MdSnackBar } from '@angular/material';
+
 
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
@@ -20,7 +22,7 @@ export class InputSearchChannelComponent {
     'Yamato Animation', 'NoCopyrightSounds', 'SamuX', 'Pyrocynical'
   ];
 
-  constructor(private service_SearchChannelData:SearchChannelDataService) {
+  constructor(private snackbar:MdSnackBar, private service_SearchChannelData:SearchChannelDataService) {
     this.inputSuggestsController = new FormControl();
     this.filteredSuggests = this.inputSuggestsController.valueChanges
         .startWith(null)
@@ -34,12 +36,16 @@ export class InputSearchChannelComponent {
   }
 
   autoSubmitOnIdle(){
+    let input_search=this.inputSuggestsController.value;
     if(this.autoSubmitInput) clearTimeout(this.autoSubmitInput);
     this.autoSubmitInput = setTimeout(() => {
-      if(this.inputSuggestsController.value){
-        this.service_SearchChannelData.setActualChannelName(this.inputSuggestsController.value);
-      }
-    }, 2000);
+      if(input_search) this.service_SearchChannelData.setActualChannelName(input_search);
+    }, 1000);
+    if(input_search){
+      this.snackbar.open("Channel '"+input_search+"' will be loaded as soon as you stop typing (1 sec idle)...", "Close", {duration: 1000});
+    }else{
+      this.snackbar.dismiss();
+    }
   }
 
 }

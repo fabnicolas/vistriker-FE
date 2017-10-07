@@ -11,7 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import  {
     MdButtonModule, MdSidenavModule, MdCardModule, MdMenuModule,
-    MdToolbarModule, MdIconModule, MdGridListModule, MdAutocompleteModule, MdInputModule
+    MdToolbarModule, MdIconModule, MdGridListModule, MdAutocompleteModule, MdInputModule,
+    MdSnackBarModule
   } from '@angular/material';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MaterialSidenavComponent } from './material-sidenav/material-sidenav.component';
@@ -41,6 +42,7 @@ import { SearchChannelDataService } from './search-channel-data.service';
     BrowserAnimationsModule,
     MdButtonModule, MdSidenavModule, MdCardModule, MdMenuModule,
     MdToolbarModule, MdIconModule, MdGridListModule, MdAutocompleteModule, MdInputModule,
+    MdSnackBarModule,
     CONST_ROUTING,
     RouterModule
   ],

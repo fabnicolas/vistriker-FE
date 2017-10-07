@@ -15,7 +15,6 @@ export class AppComponent {
 
   constructor(private router: Router, private service_SearchChannelData:SearchChannelDataService){
     this.subscription_SearchChannelData = this.service_SearchChannelData.getActualChannel_asObservable().subscribe(channel_name =>
-      //console.log("Channel_Name="+channel_name)
       this.router.navigate(['channel',channel_name])
     );
   }
