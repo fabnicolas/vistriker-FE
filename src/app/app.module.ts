@@ -20,6 +20,7 @@ import { MaterialContentGridComponent } from './material-content-grid/material-c
 import { VideoViewComponent } from './video-view/video-view.component';
 import { SafePipe } from './safe.pipe';
 import { InputSearchChannelComponent } from './input-search-channel/input-search-channel.component';
+import { SearchChannelDataService } from './search-channel-data.service';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { InputSearchChannelComponent } from './input-search-channel/input-search
     CONST_ROUTING,
     RouterModule
   ],
+  providers: [SearchChannelDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

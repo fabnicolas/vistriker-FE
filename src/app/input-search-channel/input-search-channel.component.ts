@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { SearchChannelDataService } from '../search-channel-data.service';
 
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
@@ -19,7 +20,7 @@ export class InputSearchChannelComponent {
     'Yamato Animation', 'NoCopyrightSounds', 'SamuX', 'Pyrocynical'
   ];
 
-  constructor() {
+  constructor(private service_SearchChannelData:SearchChannelDataService) {
     this.inputSuggestsController = new FormControl();
     this.filteredSuggests = this.inputSuggestsController.valueChanges
         .startWith(null)
@@ -33,10 +34,11 @@ export class InputSearchChannelComponent {
   }
 
   autoSubmitOnIdle(){
-    console.log("Invoked NOW: "+this.inputSuggestsController.value);
     if(this.autoSubmitInput) clearTimeout(this.autoSubmitInput);
     this.autoSubmitInput = setTimeout(() => {
-      console.log("Invoked later: "+this.inputSuggestsController.value);
+      if(this.inputSuggestsController.value){
+        this.service_SearchChannelData.setActualChannelName(this.inputSuggestsController.value);
+      }
     }, 2000);
   }
 
