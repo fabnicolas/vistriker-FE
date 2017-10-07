@@ -10,25 +10,34 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./input-search-channel.component.css']
 })
 export class InputSearchChannelComponent {
-  stateCtrl: FormControl;
-  filteredStates: any;
+  inputSuggestsController: FormControl;
+  filteredSuggests: any;
+  autoSubmitInput: any;
 
-  states = [
+  default_channel_list = [
     'Zeb89', 'ZombieBest', 'Quei due sul Server', 'Quei due sul Server 2', 'Parliamo di Videogiochi',
     'Yamato Animation', 'NoCopyrightSounds', 'SamuX', 'Pyrocynical'
   ];
 
   constructor() {
-    this.stateCtrl = new FormControl();
-    this.filteredStates = this.stateCtrl.valueChanges
+    this.inputSuggestsController = new FormControl();
+    this.filteredSuggests = this.inputSuggestsController.valueChanges
         .startWith(null)
-        .map(name => this.filterStates(name));
-    this.stateCtrl.setValue(null);
+        .map(name => this.filterSuggests(name));
+    this.inputSuggestsController.setValue(null);
   }
 
-  filterStates(val: string) {
-    return val ? this.states.filter(s => s.toLowerCase().indexOf(val.toLowerCase()) === 0)
-               : this.states;
+  filterSuggests(val: string) {
+    return val ? this.default_channel_list.filter(s => s.toLowerCase().indexOf(val.toLowerCase()) === 0)
+               : this.default_channel_list;
+  }
+
+  autoSubmitOnIdle(){
+    console.log("Invoked NOW: "+this.inputSuggestsController.value);
+    if(this.autoSubmitInput) clearTimeout(this.autoSubmitInput);
+    this.autoSubmitInput = setTimeout(() => {
+      console.log("Invoked later: "+this.inputSuggestsController.value);
+    }, 2000);
   }
 
 }

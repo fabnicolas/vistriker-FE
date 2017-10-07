@@ -5,5 +5,6 @@
 
 export const environment = {
   production: false,
-  backend_url: 'https://openshift-cartridge-nodejs-template-qywyeemmxb.now.sh/vistriker-BE'
+//backend_url: 'https://openshift-cartridge-nodejs-template-qywyeemmxb.now.sh/vistriker-BE'
+  backend_url: 'http://localhost:8200'
 };
