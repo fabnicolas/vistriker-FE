@@ -1,7 +1,7 @@
 import { ViewChild, Component } from '@angular/core';
 import { MaterialSidenavComponent } from './material-sidenav/material-sidenav.component';
 import { Router /*RouterModule, ActivatedRoute*/ } from '@angular/router';
-import { SearchChannelDataService } from './search-channel-data.service';
+import { DataService } from './data.service';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
@@ -13,7 +13,7 @@ export class AppComponent {
   mode=0;
   subscription_SearchChannelData: Subscription;
 
-  constructor(private router: Router, private service_SearchChannelData:SearchChannelDataService){
+  constructor(private router: Router, private service_SearchChannelData:DataService){
     this.subscription_SearchChannelData = this.service_SearchChannelData.getActualChannel_asObservable().subscribe(channel_name =>
       this.router.navigate(['channel',channel_name])
     );

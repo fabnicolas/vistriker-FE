@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { SearchChannelDataService } from '../search-channel-data.service';
+import { DataService } from '../data.service';
 import { MdSnackBar } from '@angular/material';
 
 
@@ -22,7 +22,7 @@ export class InputSearchChannelComponent {
     'Yamato Animation', 'NoCopyrightSounds', 'SamuX', 'Pyrocynical'
   ];
 
-  constructor(private snackbar:MdSnackBar, private service_SearchChannelData:SearchChannelDataService) {
+  constructor(private snackbar:MdSnackBar, private service_SearchChannelData:DataService) {
     this.inputSuggestsController = new FormControl();
     this.filteredSuggests = this.inputSuggestsController.valueChanges
         .startWith(null)

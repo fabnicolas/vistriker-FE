@@ -21,7 +21,8 @@ import { MaterialContentGridComponent } from './material-content-grid/material-c
 import { VideoViewComponent } from './video-view/video-view.component';
 import { SafePipe } from './safe.pipe';
 import { InputSearchChannelComponent } from './input-search-channel/input-search-channel.component';
-import { SearchChannelDataService } from './search-channel-data.service';
+import { DataService } from './data.service';
+import { SidenavPushRightComponent } from './sidenav-push-right/sidenav-push-right.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SearchChannelDataService } from './search-channel-data.service';
     MaterialContentGridComponent,
     VideoViewComponent,
     SafePipe,
-    InputSearchChannelComponent
+    InputSearchChannelComponent,
+    SidenavPushRightComponent
   ],
   imports: [
     HttpModule,
@@ -46,7 +48,7 @@ import { SearchChannelDataService } from './search-channel-data.service';
     CONST_ROUTING,
     RouterModule
   ],
-  providers: [SearchChannelDataService],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

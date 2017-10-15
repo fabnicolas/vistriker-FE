@@ -9,5 +9,62 @@ div[custom-sidenav-menu] a{
 div[custom-sidenav-content]{
   display: flex;
   flex-direction: column;
-	height: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;  
+}
+
+/* VIDEO LEFT MENU ICON */
+
+#menu-toggle:focus {
+  outline: none;
+}
+#menu-toggle {
+  display: inline-block;
+  position: relative;
+  width: 51px;
+  height: 51px;
+  cursor: pointer;
+  border: none;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  background: darkorange;
+  /*-webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;*/
+}
+
+/* + color */
+#menu-toggle:before,
+#menu-toggle:after {
+  position: absolute;
+  content: "";
+  background-color: #232629;
+}
+
+/* | line of + */
+#menu-toggle:before {
+  top: 12px;
+  left: 25px;
+  width: 1px;
+  height: 27px;
+}
+/* - line of + */
+#menu-toggle:after {
+  top: 25px;
+  left: 12px;
+  width: 27px;
+  height: 1px;
+}
+
+#menu-switch {
+  display: none;
+}
+
+#menu-switch:checked ~ .page-wrap #menu-toggle {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
