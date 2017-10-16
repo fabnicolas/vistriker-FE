@@ -23,6 +23,7 @@ import { SafePipe } from './safe.pipe';
 import { InputSearchChannelComponent } from './input-search-channel/input-search-channel.component';
 import { DataService } from './data.service';
 import { SidenavPushRightComponent } from './sidenav-push-right/sidenav-push-right.component';
+import { VideoOptionsButtonComponent } from './video-options-button/video-options-button.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SidenavPushRightComponent } from './sidenav-push-right/sidenav-push-rig
     VideoViewComponent,
     SafePipe,
     InputSearchChannelComponent,
-    SidenavPushRightComponent
+    SidenavPushRightComponent,
+    VideoOptionsButtonComponent
   ],
   imports: [
     HttpModule,
