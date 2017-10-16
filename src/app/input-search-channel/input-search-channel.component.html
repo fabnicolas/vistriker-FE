@@ -1,9 +1,0 @@
-<md-input-container>
-  <input mdInput [mdAutocomplete]="auto" [formControl]="inputSuggestsController" (input)="autoSubmitOnIdle()">
-</md-input-container>
-
-<md-autocomplete #auto="mdAutocomplete">
-  <md-option (onSelectionChange)="autoSubmitOnIdle(suggest)" *ngFor="let suggest of filteredSuggests | async" [value]="suggest">
-    {{ suggest }}
-  </md-option>
-</md-autocomplete>

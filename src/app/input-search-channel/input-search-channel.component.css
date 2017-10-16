@@ -1,9 +1,0 @@
-.mat-input-element {
-    margin-top: 10px;
-    font-size: 16px;
-}
-
-
-.mat-input-placeholder.mat-float:not(.mat-empty) {
-    color: green;
-}
