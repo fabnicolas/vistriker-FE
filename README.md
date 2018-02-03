@@ -10,7 +10,7 @@ This is a MEAN stack project. It actually uses:
 - Node.js (Check backend repository) for web server to provide API access.
 
 ## Web Application
-https://finalgalaxy.github.io/vistriker-FE/
+https://fabnicolas.github.io/vistriker-FE/
 
 ![ViStriker Yamato Animation Screenshot](http://i.imgur.com/QSGQ747.png)
 
